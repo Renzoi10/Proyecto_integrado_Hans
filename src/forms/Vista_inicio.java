@@ -17,7 +17,7 @@ public class Vista_inicio extends javax.swing.JFrame {
     public Vista_inicio() {
         initComponents();
         this.setLocation(320,180);
-        setSize(715,435);
+        setSize(700,400);
     }
 
     /**
@@ -35,6 +35,7 @@ public class Vista_inicio extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo.PNG"))); // NOI18N

@@ -19,12 +19,12 @@ public class Menu extends javax.swing.JFrame {
         this.setLocation(320,180);
         
         
-        setSize(715,435);
+        setSize(700,400);
         Llenado =new Llenado();
-        Llenado.setBounds(250, 0,460,400);
+        Llenado.setBounds(250, 0,460,401);
         add(Llenado);
         vaciado = new Vaciado();
-        vaciado.setBounds(250,0,460,400);
+        vaciado.setBounds(250,0,460,401);
         add(vaciado);
         vaciado.setVisible(false);
         
@@ -45,8 +45,9 @@ public class Menu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 204));
+        jPanel1.setBackground(new java.awt.Color(204, 0, 0));
         jPanel1.setForeground(new java.awt.Color(126, 181, 187));
 
         Llenar.setText("Llenado");
@@ -94,33 +95,30 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 7, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void vaciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vaciarActionPerformed
-        setSize(715,435);
+        setSize(700,400);
         vaciado.setVisible(true);
         Llenado.setVisible(false);
         revalidate();
         repaint();
-        
-        
-        
+        vaciado.reciborad.setText(Llenado.radres.getText());
+        vaciado.reciboalt.setText(Llenado.altres.getText());
     }//GEN-LAST:event_vaciarActionPerformed
 
     private void LlenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LlenarActionPerformed
-        setSize(715,435);
+        setSize(700,400);
         vaciado.setVisible(false);
         Llenado.setVisible(true);
         revalidate();

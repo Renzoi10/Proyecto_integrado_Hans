@@ -48,7 +48,7 @@ public class Llenado extends javax.swing.JPanel {
         altres = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        limpiar = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -133,8 +133,13 @@ public class Llenado extends javax.swing.JPanel {
         jLabel12.setText("m");
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, -1, -1));
 
-        jButton1.setText("LIMPIAR");
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 110, -1));
+        limpiar.setText("LIMPIAR");
+        limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiarActionPerformed(evt);
+            }
+        });
+        add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 110, -1));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpeg"))); // NOI18N
         add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 400));
@@ -169,6 +174,7 @@ public class Llenado extends javax.swing.JPanel {
             System.out.println("horas");
             txt_resultado.setText(String.valueOf(ttotal[0])+" h  "+String.valueOf(ttotal[1])+" m  "+String.valueOf(ttotal[2])+" s");//imprime hrs+min+seg
         }
+        
          
     }//GEN-LAST:event_calcularActionPerformed
 
@@ -181,13 +187,20 @@ public class Llenado extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_radresActionPerformed
 
+    private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
+        radtub.setText("");
+        velagu.setText("");
+        radres.setText("");
+        altres.setText("");
+        txt_resultado.setText("");
+    }//GEN-LAST:event_limpiarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
-    private javax.swing.JTextField altres;
+    public javax.swing.JTextField altres;
     private javax.swing.JButton calcular;
     private javax.swing.JButton cerrar;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -200,7 +213,8 @@ public class Llenado extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField radres;
+    private javax.swing.JButton limpiar;
+    public javax.swing.JTextField radres;
     private javax.swing.JTextField radtub;
     private javax.swing.JScrollPane tiempo;
     private javax.swing.JTextArea txt_resultado;

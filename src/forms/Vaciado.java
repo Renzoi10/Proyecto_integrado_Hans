@@ -5,6 +5,8 @@
  */
 package forms;
 
+import clases.vaciado;
+
 /**
  *
  * @author USUARIO
@@ -30,22 +32,21 @@ public class Vaciado extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        velotub2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        radtub2 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        enviar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         cerrar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        resultadovaciado = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         reciboalt = new javax.swing.JTextField();
-        enviorad = new javax.swing.JTextField();
+        reciborad = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        calcular = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
 
@@ -60,25 +61,14 @@ public class Vaciado extends javax.swing.JPanel {
 
         jLabel3.setText("Velocidad de circulación del agua:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 79, -1));
+        add(velotub2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 79, -1));
 
         jLabel4.setText("m");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 79, -1));
+        add(radtub2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 79, -1));
 
         jLabel5.setText("m");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
-
-        enviar.setText("CALCULAR");
-        enviar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enviarActionPerformed(evt);
-            }
-        });
-        add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 120, -1));
-
-        jButton1.setText("LIMPIAR");
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 110, -1));
 
         cerrar.setText("CERRAR");
         cerrar.addActionListener(new java.awt.event.ActionListener() {
@@ -86,11 +76,11 @@ public class Vaciado extends javax.swing.JPanel {
                 cerrarActionPerformed(evt);
             }
         });
-        add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 110, -1));
+        add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 110, -1));
 
         jLabel7.setText("Tiempo de llenado :");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
-        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 200, 30));
+        add(resultadovaciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 200, 30));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("Datos del reservorio: ");
@@ -109,18 +99,26 @@ public class Vaciado extends javax.swing.JPanel {
         });
         add(reciboalt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 80, -1));
 
-        enviorad.addActionListener(new java.awt.event.ActionListener() {
+        reciborad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                envioradActionPerformed(evt);
+                reciboradActionPerformed(evt);
             }
         });
-        add(enviorad, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 80, -1));
+        add(reciborad, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 80, -1));
 
         jLabel12.setText("m");
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, -1, -1));
 
         jLabel13.setText("m");
         add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, -1, -1));
+
+        calcular.setText("CALCULAR");
+        calcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcularActionPerformed(evt);
+            }
+        });
+        add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 120, -1));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpeg"))); // NOI18N
         add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 400));
@@ -130,29 +128,51 @@ public class Vaciado extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarActionPerformed
-
-        
+ 
+        System.exit(0);
     }//GEN-LAST:event_cerrarActionPerformed
-
-    private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
-        // TODO add your handling code here
-    }//GEN-LAST:event_enviarActionPerformed
 
     private void reciboaltActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reciboaltActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_reciboaltActionPerformed
 
-    private void envioradActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_envioradActionPerformed
+    private void reciboradActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reciboradActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_envioradActionPerformed
+    }//GEN-LAST:event_reciboradActionPerformed
+
+    private void calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularActionPerformed
+        // TODO add your handling code here
+
+        radtubo = Float.parseFloat(radtub2.getText()); //
+        velagua = Float.parseFloat(velotub2.getText()); //
+        radtq = Float.parseFloat(reciborad.getText());
+        htq = Float.parseFloat(reciboalt.getText());
+        resultadovaciado.setEditable(false); // evita que el campo 5 se edite
+
+        vaciado tq= new vaciado(radtubo, radtq, radtq, velagua, radtq, radtq);
+
+        ttotal = tq.tiempo();
+
+        System.out.println(ttotal[0]);
+        System.out.println(ttotal[1]);
+        System.out.println(ttotal[2]);
+        if (ttotal[0]==0){
+            if(ttotal[1]==0){ // si horas=0 y si minutos=0
+                resultadovaciado.setText(String.valueOf(ttotal[2])+" s"); }
+            else{
+                resultadovaciado.setText(String.valueOf(ttotal[1])+" m  "+String.valueOf(ttotal[2])+" s");}//imprime hrs+min+seg
+        }else{
+            System.out.println("horas");
+            resultadovaciado.setText(String.valueOf(ttotal[0])+" h  "+String.valueOf(ttotal[1])+" m  "+String.valueOf(ttotal[2])+" s");//imprime hrs+min+seg
+        }
+
+    }//GEN-LAST:event_calcularActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
+    private javax.swing.JButton calcular;
     private javax.swing.JButton cerrar;
-    private javax.swing.JButton enviar;
-    public static javax.swing.JTextField enviorad;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -165,9 +185,10 @@ public class Vaciado extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    public static javax.swing.JTextField reciboalt;
+    public javax.swing.JTextField radtub2;
+    public javax.swing.JTextField reciboalt;
+    public javax.swing.JTextField reciborad;
+    private javax.swing.JTextField resultadovaciado;
+    public javax.swing.JTextField velotub2;
     // End of variables declaration//GEN-END:variables
 }
