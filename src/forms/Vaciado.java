@@ -11,9 +11,9 @@ package forms;
  */
 public class Vaciado extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Vaciado
-     */
+    float radtubo,velagua,radtq,htq;
+    int[] ttotal = new int[3]; 
+    
     public Vaciado() {
         initComponents();
     }
@@ -27,7 +27,6 @@ public class Vaciado extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -40,29 +39,35 @@ public class Vaciado extends javax.swing.JPanel {
         cerrar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        reciboalt = new javax.swing.JTextField();
+        enviorad = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
-
-        jLabel6.setText("Tiempo de llenado :");
+        jLabel11 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Ingrese los siguientes datos para calcular el caudal de salida :");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 30, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         jLabel2.setText("Radio de la tubería:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
-        jLabel3.setText("Velcidad de circulación del agua:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 79, -1));
+        jLabel3.setText("Velocidad de circulación del agua:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 79, -1));
 
         jLabel4.setText("m");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, -1, -1));
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 79, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 79, -1));
 
         jLabel5.setText("m");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
 
         enviar.setText("CALCULAR");
         enviar.addActionListener(new java.awt.event.ActionListener() {
@@ -70,10 +75,10 @@ public class Vaciado extends javax.swing.JPanel {
                 enviarActionPerformed(evt);
             }
         });
-        add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 120, -1));
+        add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 120, -1));
 
         jButton1.setText("LIMPIAR");
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 110, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 110, -1));
 
         cerrar.setText("CERRAR");
         cerrar.addActionListener(new java.awt.event.ActionListener() {
@@ -81,14 +86,47 @@ public class Vaciado extends javax.swing.JPanel {
                 cerrarActionPerformed(evt);
             }
         });
-        add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 110, -1));
+        add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 110, -1));
 
         jLabel7.setText("Tiempo de llenado :");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
         add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 200, 30));
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setText("Datos del reservorio: ");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+
+        jLabel9.setText("Altura del reservorio:");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        jLabel10.setText("Radio del reservorio:");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
+
+        reciboalt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reciboaltActionPerformed(evt);
+            }
+        });
+        add(reciboalt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 80, -1));
+
+        enviorad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                envioradActionPerformed(evt);
+            }
+        });
+        add(enviorad, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 80, -1));
+
+        jLabel12.setText("m");
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, -1, -1));
+
+        jLabel13.setText("m");
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, -1, -1));
+
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpeg"))); // NOI18N
         add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 400));
+
+        jLabel11.setText("m");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarActionPerformed
@@ -100,21 +138,36 @@ public class Vaciado extends javax.swing.JPanel {
         // TODO add your handling code here
     }//GEN-LAST:event_enviarActionPerformed
 
+    private void reciboaltActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reciboaltActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_reciboaltActionPerformed
+
+    private void envioradActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_envioradActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_envioradActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
     private javax.swing.JButton cerrar;
     private javax.swing.JButton enviar;
+    public static javax.swing.JTextField enviorad;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    public static javax.swing.JTextField reciboalt;
     // End of variables declaration//GEN-END:variables
 }

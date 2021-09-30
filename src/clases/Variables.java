@@ -6,7 +6,7 @@ public class Variables {
     float alturatq; //altura del tanque
     float v_agua; //velocidad del agua
     
-    float voltq;
+    public float voltq;
     float caudal;
 
     public Variables(float radiotub, float radiotq, float alturatq, float v_agua, float voltq, float caudal) {

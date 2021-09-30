@@ -16,7 +16,8 @@ public class Vista_inicio extends javax.swing.JFrame {
      */
     public Vista_inicio() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        this.setLocation(320,180);
+        setSize(715,435);
     }
 
     /**
@@ -38,7 +39,7 @@ public class Vista_inicio extends javax.swing.JFrame {
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo.PNG"))); // NOI18N
         logo.setText("jLabel2");
-        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 400, 70));
+        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 400, 70));
 
         ingresar.setBackground(new java.awt.Color(255, 255, 255));
         ingresar.setForeground(new java.awt.Color(0, 0, 0));
@@ -48,7 +49,7 @@ public class Vista_inicio extends javax.swing.JFrame {
                 ingresarActionPerformed(evt);
             }
         });
-        getContentPane().add(ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 150, 50));
+        getContentPane().add(ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 150, 50));
         ingresar.getAccessibleContext().setAccessibleDescription("");
 
         salir.setText("x");
@@ -61,9 +62,9 @@ public class Vista_inicio extends javax.swing.JFrame {
 
         fondo.setBackground(new java.awt.Color(255, 255, 255));
         fondo.setForeground(new java.awt.Color(255, 255, 255));
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo_inicio.jpg"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo2.jpg"))); // NOI18N
         fondo.setText("jLabel1");
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 510));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-350, 0, 1070, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

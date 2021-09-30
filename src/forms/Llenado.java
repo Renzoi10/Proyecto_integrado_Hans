@@ -30,22 +30,22 @@ public class Llenado extends javax.swing.JPanel {
 
         jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txt1 = new javax.swing.JTextField();
+        radtub = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         cerrar = new javax.swing.JButton();
-        enviar = new javax.swing.JButton();
+        calcular = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         tiempo = new javax.swing.JScrollPane();
         txt_resultado = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
-        txt2 = new javax.swing.JTextField();
+        velagu = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        txt3 = new javax.swing.JTextField();
+        radres = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        txt4 = new javax.swing.JTextField();
+        altres = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -60,12 +60,12 @@ public class Llenado extends javax.swing.JPanel {
         jLabel2.setText("Radio de la tubería:");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
-        txt1.addActionListener(new java.awt.event.ActionListener() {
+        radtub.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt1ActionPerformed(evt);
+                radtubActionPerformed(evt);
             }
         });
-        add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 80, -1));
+        add(radtub, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 80, -1));
 
         jLabel4.setText("m");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, -1, -1));
@@ -81,13 +81,13 @@ public class Llenado extends javax.swing.JPanel {
         });
         add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 110, -1));
 
-        enviar.setText("CALCULAR");
-        enviar.addActionListener(new java.awt.event.ActionListener() {
+        calcular.setText("CALCULAR");
+        calcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enviarActionPerformed(evt);
+                calcularActionPerformed(evt);
             }
         });
-        add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 120, -1));
+        add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 120, -1));
 
         jLabel1.setText("Tiempo de llenado :");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
@@ -102,9 +102,9 @@ public class Llenado extends javax.swing.JPanel {
 
         add(tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 240, 30));
 
-        jLabel3.setText("Velcidad de circulación del agua:");
+        jLabel3.setText("Velocidad de circulación del agua:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
-        add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 80, -1));
+        add(velagu, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 80, -1));
 
         jLabel6.setText("m/s");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 34, 23));
@@ -113,19 +113,19 @@ public class Llenado extends javax.swing.JPanel {
         jLabel9.setText("Ingrese los datos sobre el reservorio :");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
-        txt3.addActionListener(new java.awt.event.ActionListener() {
+        radres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt3ActionPerformed(evt);
+                radresActionPerformed(evt);
             }
         });
-        add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 80, -1));
+        add(radres, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 80, -1));
 
         jLabel7.setText("Radio del reservorio:");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
         jLabel10.setText("Altura del reservorio:");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
-        add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 80, -1));
+        add(altres, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 80, -1));
 
         jLabel11.setText("m");
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, -1, -1));
@@ -140,17 +140,17 @@ public class Llenado extends javax.swing.JPanel {
         add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 400));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt1ActionPerformed
+    private void radtubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radtubActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt1ActionPerformed
+    }//GEN-LAST:event_radtubActionPerformed
 
-    private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
+    private void calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularActionPerformed
         // TODO add your handling code here
-
-        radtubo = Float.parseFloat(txt1.getText()); //obtiene el caudal desde el campo 1
-        velagua = Float.parseFloat(txt2.getText()); //obtiene el volumen desde el usuario
-        radtq = Float.parseFloat(txt3.getText());
-        htq = Float.parseFloat(txt4.getText());
+        
+        radtubo = Float.parseFloat(radtub.getText()); //
+        velagua = Float.parseFloat(velagu.getText()); //
+        radtq = Float.parseFloat(radres.getText());
+        htq = Float.parseFloat(altres.getText());
         txt_resultado.setEditable(false); // evita que el campo 5 se edite
 
         tanque tq= new tanque(radtubo, radtq, radtq, velagua, radtq, radtq);
@@ -169,22 +169,24 @@ public class Llenado extends javax.swing.JPanel {
             System.out.println("horas");
             txt_resultado.setText(String.valueOf(ttotal[0])+" h  "+String.valueOf(ttotal[1])+" m  "+String.valueOf(ttotal[2])+" s");//imprime hrs+min+seg
         }
-    }//GEN-LAST:event_enviarActionPerformed
+         
+    }//GEN-LAST:event_calcularActionPerformed
 
     private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarActionPerformed
         System.exit(0);
         
     }//GEN-LAST:event_cerrarActionPerformed
 
-    private void txt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt3ActionPerformed
+    private void radresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radresActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt3ActionPerformed
+    }//GEN-LAST:event_radresActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
+    private javax.swing.JTextField altres;
+    private javax.swing.JButton calcular;
     private javax.swing.JButton cerrar;
-    private javax.swing.JButton enviar;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -198,11 +200,10 @@ public class Llenado extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField radres;
+    private javax.swing.JTextField radtub;
     private javax.swing.JScrollPane tiempo;
-    private javax.swing.JTextField txt1;
-    private javax.swing.JTextField txt2;
-    private javax.swing.JTextField txt3;
-    private javax.swing.JTextField txt4;
     private javax.swing.JTextArea txt_resultado;
+    private javax.swing.JTextField velagu;
     // End of variables declaration//GEN-END:variables
 }
