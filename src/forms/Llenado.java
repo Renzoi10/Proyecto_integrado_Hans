@@ -158,7 +158,7 @@ public class Llenado extends javax.swing.JPanel {
         htq = Float.parseFloat(altres.getText());
         txt_resultado.setEditable(false); // evita que el campo 5 se edite
 
-        tanque tq= new tanque(radtubo, radtq, radtq, velagua, radtq, radtq);
+        Tanque tq= new Tanque(radtubo, radtq, radtq, velagua, radtq, radtq);
 
         ttotal = tq.tiempo();
 
