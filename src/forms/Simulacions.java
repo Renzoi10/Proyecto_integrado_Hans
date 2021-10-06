@@ -112,7 +112,7 @@ public class Simulacions extends javax.swing.JPanel {
         add(botonvaciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
 
         fondosimu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondosimu.png"))); // NOI18N
-        add(fondosimu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, -1, -1));
+        add(fondosimu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 400));
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonllenadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonllenadoActionPerformed
