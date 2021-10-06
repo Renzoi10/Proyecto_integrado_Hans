@@ -27,9 +27,18 @@ public class Simulacion extends javax.swing.JFrame {
     Thread tiempollenado = new Thread(){
         public void run(){
             try{
+                int res;
                 for(seg = 0; seg<=100; seg++){
                     reservorio.setValue(seg);
                     tiempollenado.sleep(100);
+                    res = reservorio.getValue();
+
+                    if(res == 100){
+                        botonvaciado.setVisible(true);
+                    }else {
+                        botonvaciado.setVisible(false);
+                    }
+        
                 }
             }catch(Exception e){
             }
@@ -76,18 +85,7 @@ public class Simulacion extends javax.swing.JFrame {
 
     public Simulacion() {
         initComponents();
-        int res;
-        
-        res = reservorio.getValue();
-        
-        if(res == 100){
-            botonvaciado.setVisible(true);
-        }else {
-            botonvaciado.setVisible(false);
-        }
-        
         botonvaciado.setVisible(false);
-        
         this.setLocationRelativeTo(null);
         UIManager.put( "nimbusOrange", new Color(   38, 139, 210 ) );    
     }
