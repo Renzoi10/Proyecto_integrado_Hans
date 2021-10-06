@@ -38,7 +38,7 @@ public class Menu extends javax.swing.JFrame {
         add(vaciado);
         vaciado.setVisible(false);
         simulacions=new Simulacions();
-        simulacions.setBounds(710, 0, 382, 401);
+        simulacions.setBounds(710, 0, 385, 401);
         add(simulacions);
         simulacions.setVisible(true);
 
