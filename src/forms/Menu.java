@@ -15,21 +15,21 @@ import javax.swing.JPanel;
  * @author USUARIO
  */
 public class Menu extends javax.swing.JFrame {
-    
+
     FondoPanel fondo = new FondoPanel();
 
     Vaciado vaciado;
     Llenado Llenado;
-    Simulacion simulacion;
-    
+    Simulacions simulacions;
+
     public Menu() {
         this.setContentPane(fondo);
-        
+
         initComponents();
-        this.setLocation(320,180);
-        
-        
-        setSize(700,400);
+        this.setLocation(150,180);
+
+
+        setSize(1082,400);
         Llenado =new Llenado();
         Llenado.setBounds(250, 0,460,401);
         add(Llenado);
@@ -37,8 +37,11 @@ public class Menu extends javax.swing.JFrame {
         vaciado.setBounds(250,0,460,401);
         add(vaciado);
         vaciado.setVisible(false);
-        simulacion = new Simulacion();
-        
+        simulacions=new Simulacions();
+        simulacions.setBounds(710, 0, 385, 401);
+        add(simulacions);
+        simulacions.setVisible(true);
+
     }
 
     /**
@@ -54,7 +57,6 @@ public class Menu extends javax.swing.JFrame {
         Llenar = new javax.swing.JButton();
         vaciar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        simular = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -62,7 +64,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        Llenar.setBackground(new java.awt.Color(0, 0, 0));
+        Llenar.setBackground(new java.awt.Color(51, 51, 51));
         Llenar.setForeground(new java.awt.Color(255, 255, 255));
         Llenar.setText("Llenado");
         Llenar.addActionListener(new java.awt.event.ActionListener() {
@@ -81,16 +83,6 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logomenu.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-
-        simular.setBackground(new java.awt.Color(0, 0, 0));
-        simular.setForeground(new java.awt.Color(255, 255, 255));
-        simular.setText("Simulación");
-        simular.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                simularActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -98,25 +90,22 @@ public class Menu extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(51, 51, 51)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Llenar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(vaciar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(simular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(vaciar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Llenar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(jLabel1)
+                .addGap(38, 38, 38)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Llenar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(vaciar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(simular)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addComponent(vaciar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -136,9 +125,10 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void vaciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vaciarActionPerformed
-        setSize(700,400);
+        setSize(1082,400);
         vaciado.setVisible(true);
         Llenado.setVisible(false);
+        simulacions.setVisible(true);
         revalidate();
         repaint();
         vaciado.reciborad.setText(Llenado.radres.getText());
@@ -146,17 +136,14 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_vaciarActionPerformed
 
     private void LlenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LlenarActionPerformed
-        setSize(700,400);
+        setSize(1082,400);
         vaciado.setVisible(false);
         Llenado.setVisible(true);
+        simulacions.setVisible(true);
         revalidate();
         repaint();
 
     }//GEN-LAST:event_LlenarActionPerformed
-
-    private void simularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simularActionPerformed
-        simulacion.setVisible(true);
-    }//GEN-LAST:event_simularActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,7 +152,7 @@ public class Menu extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -197,21 +184,20 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton Llenar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton simular;
     private javax.swing.JButton vaciar;
     // End of variables declaration//GEN-END:variables
-    
+
     class FondoPanel extends JPanel{
         private Image imagen;
-        
+
         @Override
         public void paint(Graphics g){
             imagen = new ImageIcon(getClass().getResource("../imagenes/Capturatq.png")).getImage();
-            
+
             g.drawImage(imagen,0,0, getWidth(),getHeight(),this);
-            
+
             setOpaque(false);
-            
+
             super.paint(g);
         }
     }
