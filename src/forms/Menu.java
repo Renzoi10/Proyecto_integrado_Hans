@@ -20,15 +20,16 @@ public class Menu extends javax.swing.JFrame {
 
     Vaciado vaciado;
     Llenado Llenado;
+    Simulacions simulacions;
 
     public Menu() {
         this.setContentPane(fondo);
 
         initComponents();
-        this.setLocation(320,180);
+        this.setLocation(150,180);
 
 
-        setSize(700,400);
+        setSize(1082,400);
         Llenado =new Llenado();
         Llenado.setBounds(250, 0,460,401);
         add(Llenado);
@@ -36,6 +37,10 @@ public class Menu extends javax.swing.JFrame {
         vaciado.setBounds(250,0,460,401);
         add(vaciado);
         vaciado.setVisible(false);
+        simulacions=new Simulacions();
+        simulacions.setBounds(710, 0, 382, 401);
+        add(simulacions);
+        simulacions.setVisible(true);
 
     }
 
@@ -123,6 +128,7 @@ public class Menu extends javax.swing.JFrame {
         setSize(700,400);
         vaciado.setVisible(true);
         Llenado.setVisible(false);
+        simulacions.setVisible(true);
         revalidate();
         repaint();
         vaciado.reciborad.setText(Llenado.radres.getText());
@@ -133,6 +139,7 @@ public class Menu extends javax.swing.JFrame {
         setSize(700,400);
         vaciado.setVisible(false);
         Llenado.setVisible(true);
+        simulacions.setVisible(true);
         revalidate();
         repaint();
 
