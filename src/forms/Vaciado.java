@@ -5,7 +5,7 @@
  */
 package forms;
 
-import clases.vaciado;
+import clases.Tanque;
 
 /**
  *
@@ -67,7 +67,7 @@ public class Vaciado extends javax.swing.JPanel {
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
         add(radtub2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 79, -1));
 
-        jLabel5.setText("m");
+        jLabel5.setText("m/s");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
 
         cerrar.setText("CERRAR");
@@ -149,7 +149,7 @@ public class Vaciado extends javax.swing.JPanel {
         htq = Float.parseFloat(reciboalt.getText());
         resultadovaciado.setEditable(false); // evita que el campo 5 se edite
 
-        vaciado tq= new vaciado(radtubo, radtq, radtq, velagua, radtq, radtq);
+        Tanque tq= new Tanque(radtubo, radtq, radtq, velagua, radtq, radtq);
 
         ttotal = tq.tiempo();
 
