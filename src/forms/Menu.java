@@ -125,7 +125,7 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void vaciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vaciarActionPerformed
-        setSize(700,400);
+        setSize(1082,400);
         vaciado.setVisible(true);
         Llenado.setVisible(false);
         simulacions.setVisible(true);
@@ -136,7 +136,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_vaciarActionPerformed
 
     private void LlenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LlenarActionPerformed
-        setSize(700,400);
+        setSize(1082,400);
         vaciado.setVisible(false);
         Llenado.setVisible(true);
         simulacions.setVisible(true);

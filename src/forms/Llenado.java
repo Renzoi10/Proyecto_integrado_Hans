@@ -157,7 +157,7 @@ public class Llenado extends javax.swing.JPanel {
         radtq = Float.parseFloat(radres.getText());
         htq = Float.parseFloat(altres.getText());
         txt_resultado.setEditable(false); // evita que el campo 5 se edite
-
+        Simulacions simu= new Simulacions();
         Tanque tq= new Tanque(radtubo, radtq, radtq, velagua, radtq, radtq);
 
         ttotal = tq.tiempo();
@@ -174,6 +174,9 @@ public class Llenado extends javax.swing.JPanel {
             System.out.println("horas");
             txt_resultado.setText(String.valueOf(ttotal[0])+" h  "+String.valueOf(ttotal[1])+" m  "+String.valueOf(ttotal[2])+" s");//imprime hrs+min+seg
         }
+        
+        simu.tiempollenado.start();
+        
         
          
     }//GEN-LAST:event_calcularActionPerformed
