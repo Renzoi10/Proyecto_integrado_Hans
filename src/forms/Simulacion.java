@@ -76,9 +76,16 @@ public class Simulacion extends javax.swing.JFrame {
 
     public Simulacion() {
         initComponents();
-        if(reservorio){
-            
+        int res;
+        
+        res = reservorio.getValue();
+        
+        if(res == 100){
+            botonvaciado.setVisible(true);
+        }else {
+            botonllenado.setVisible(false);
         }
+        
         botonvaciado.setVisible(false);
         
         this.setLocationRelativeTo(null);
