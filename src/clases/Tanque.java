@@ -3,9 +3,9 @@ package clases;
 
 import java.util.Arrays;
 
-public class tanque extends Variables{
+public class Tanque extends Variables{
 
-    public tanque(float radiotub, float radiotq, float alturatq, float v_agua, float voltq, float caudal) {
+    public Tanque(float radiotub, float radiotq, float alturatq, float v_agua, float voltq, float caudal) {
         super(radiotub, radiotq, alturatq, v_agua, voltq, caudal);
     }
     
