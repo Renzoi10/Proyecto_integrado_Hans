@@ -83,7 +83,7 @@ public class Simulacion extends javax.swing.JFrame {
         if(res == 100){
             botonvaciado.setVisible(true);
         }else {
-            botonllenado.setVisible(false);
+            botonvaciado.setVisible(false);
         }
         
         botonvaciado.setVisible(false);
