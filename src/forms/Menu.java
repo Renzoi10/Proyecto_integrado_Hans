@@ -15,19 +15,19 @@ import javax.swing.JPanel;
  * @author USUARIO
  */
 public class Menu extends javax.swing.JFrame {
-    
+
     FondoPanel fondo = new FondoPanel();
 
     Vaciado vaciado;
     Llenado Llenado;
-    
+
     public Menu() {
         this.setContentPane(fondo);
-        
+
         initComponents();
         this.setLocation(320,180);
-        
-        
+
+
         setSize(700,400);
         Llenado =new Llenado();
         Llenado.setBounds(250, 0,460,401);
@@ -36,7 +36,7 @@ public class Menu extends javax.swing.JFrame {
         vaciado.setBounds(250,0,460,401);
         add(vaciado);
         vaciado.setVisible(false);
-        
+
     }
 
     /**
@@ -86,9 +86,9 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(vaciar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                    .addComponent(Llenar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(vaciar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Llenar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -145,7 +145,7 @@ public class Menu extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -179,18 +179,18 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton vaciar;
     // End of variables declaration//GEN-END:variables
-    
+
     class FondoPanel extends JPanel{
         private Image imagen;
-        
+
         @Override
         public void paint(Graphics g){
             imagen = new ImageIcon(getClass().getResource("../imagenes/Capturatq.png")).getImage();
-            
+
             g.drawImage(imagen,0,0, getWidth(),getHeight(),this);
-            
+
             setOpaque(false);
-            
+
             super.paint(g);
         }
     }
