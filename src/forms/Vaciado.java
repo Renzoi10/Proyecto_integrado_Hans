@@ -47,6 +47,7 @@ public class Vaciado extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         calcular = new javax.swing.JButton();
+        limpiar = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
 
@@ -54,21 +55,29 @@ public class Vaciado extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Ingrese los siguientes datos para calcular el caudal de salida :");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Radio de la tubería:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Velocidad de circulación del agua:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
-        add(velotub2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 79, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+        add(velotub2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 79, -1));
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("m");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
-        add(radtub2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 79, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 175, -1, -1));
+        add(radtub2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 79, -1));
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("m/s");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 215, -1, -1));
 
         cerrar.setText("CERRAR");
         cerrar.addActionListener(new java.awt.event.ActionListener() {
@@ -76,22 +85,29 @@ public class Vaciado extends javax.swing.JPanel {
                 cerrarActionPerformed(evt);
             }
         });
-        add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 110, -1));
+        add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 110, -1));
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Tiempo de llenado :");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
-        add(resultadovaciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 200, 30));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 335, -1, -1));
+        add(resultadovaciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 180, 30));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("Datos del reservorio: ");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Altura del reservorio:");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Radio del reservorio:");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
+        reciboalt.setEditable(false);
         reciboalt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reciboaltActionPerformed(evt);
@@ -99,6 +115,7 @@ public class Vaciado extends javax.swing.JPanel {
         });
         add(reciboalt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 80, -1));
 
+        reciborad.setEditable(false);
         reciborad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reciboradActionPerformed(evt);
@@ -106,11 +123,15 @@ public class Vaciado extends javax.swing.JPanel {
         });
         add(reciborad, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 80, -1));
 
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("m");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, -1, -1));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 55, -1, -1));
 
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("m");
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, -1, -1));
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 95, -1, -1));
 
         calcular.setText("CALCULAR");
         calcular.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +139,15 @@ public class Vaciado extends javax.swing.JPanel {
                 calcularActionPerformed(evt);
             }
         });
-        add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 120, -1));
+        add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 120, -1));
+
+        limpiar.setText("LIMPIAR");
+        limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiarActionPerformed(evt);
+            }
+        });
+        add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 110, -1));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpeg"))); // NOI18N
         add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 400));
@@ -168,6 +197,13 @@ public class Vaciado extends javax.swing.JPanel {
 
     }//GEN-LAST:event_calcularActionPerformed
 
+    private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
+
+        radtub2.setText("");
+        velotub2.setText("");
+        resultadovaciado.setText("");
+    }//GEN-LAST:event_limpiarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
@@ -185,6 +221,7 @@ public class Vaciado extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton limpiar;
     public javax.swing.JTextField radtub2;
     public javax.swing.JTextField reciboalt;
     public javax.swing.JTextField reciborad;

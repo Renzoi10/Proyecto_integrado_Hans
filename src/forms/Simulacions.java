@@ -14,9 +14,17 @@ public class Simulacions extends javax.swing.JPanel {
     Thread tiempollenado = new Thread(){
         public void run(){
             try{
+                int res;
                 for(seg = 0; seg<=100; seg++){
                     reservorio.setValue(seg);
                     tiempollenado.sleep(100);
+                    res = reservorio.getValue();
+
+                    if(res == 100){
+                        botonvaciado.setVisible(true);
+                    }else {
+                        botonvaciado.setVisible(false);
+                    }
                 }
             }catch(Exception e){
             }
@@ -40,6 +48,7 @@ public class Simulacions extends javax.swing.JPanel {
                     reservorio.setValue(seg);
                     tiempovaciado.sleep(100);
                     if(seg==0){
+                       botonvaciado.setVisible(false);
                        tubovaciado.setValue(0); 
                     }
                 }
@@ -63,6 +72,7 @@ public class Simulacions extends javax.swing.JPanel {
 
     public Simulacions() {
         initComponents();
+        botonvaciado.setVisible(false);
         UIManager.put( "nimbusOrange", new Color(   38, 139, 210 ) );
     }
 
@@ -80,6 +90,7 @@ public class Simulacions extends javax.swing.JPanel {
         tubovaciado = new javax.swing.JProgressBar();
         botonllenado = new javax.swing.JButton();
         botonvaciado = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         fondosimu = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -87,13 +98,13 @@ public class Simulacions extends javax.swing.JPanel {
         reservorio.setOrientation(1);
         reservorio.setPreferredSize(new java.awt.Dimension(146, 250));
         reservorio.setRequestFocusEnabled(false);
-        add(reservorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 170, 259));
+        add(reservorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 170, 260));
 
         tubollenado.setPreferredSize(new java.awt.Dimension(146, 25));
         add(tubollenado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 120, -1));
 
         tubovaciado.setPreferredSize(new java.awt.Dimension(146, 25));
-        add(tubovaciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 110, -1));
+        add(tubovaciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 295, 110, -1));
 
         botonllenado.setText("Llenado");
         botonllenado.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +112,7 @@ public class Simulacions extends javax.swing.JPanel {
                 botonllenadoActionPerformed(evt);
             }
         });
-        add(botonllenado, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, -1, -1));
+        add(botonllenado, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, -1));
 
         botonvaciado.setText("Vaciado");
         botonvaciado.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +120,11 @@ public class Simulacions extends javax.swing.JPanel {
                 botonvaciadoActionPerformed(evt);
             }
         });
-        add(botonvaciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
+        add(botonvaciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Bookman Old Style", 1, 14)); // NOI18N
+        jLabel1.setText("Simulación de llenado y vaciado");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         fondosimu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondosimu.png"))); // NOI18N
         add(fondosimu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 400));
@@ -132,6 +147,7 @@ public class Simulacions extends javax.swing.JPanel {
     private javax.swing.JButton botonllenado;
     private javax.swing.JButton botonvaciado;
     private javax.swing.JLabel fondosimu;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JProgressBar reservorio;
     private javax.swing.JProgressBar tubollenado;
     private javax.swing.JProgressBar tubovaciado;

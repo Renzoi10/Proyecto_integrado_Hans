@@ -133,6 +133,7 @@ public class Menu extends javax.swing.JFrame {
         repaint();
         vaciado.reciborad.setText(Llenado.radres.getText());
         vaciado.reciboalt.setText(Llenado.altres.getText());
+        
     }//GEN-LAST:event_vaciarActionPerformed
 
     private void LlenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LlenarActionPerformed
