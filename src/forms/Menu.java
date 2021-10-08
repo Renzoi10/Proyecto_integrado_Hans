@@ -193,7 +193,7 @@ public class Menu extends javax.swing.JFrame {
 
         @Override
         public void paint(Graphics g){
-            imagen = new ImageIcon(getClass().getResource("../imagenes/Capturatq.png")).getImage();
+            imagen = new ImageIcon(getClass().getResource("../imagenes/fondomenu.jpg")).getImage();
 
             g.drawImage(imagen,0,0, getWidth(),getHeight(),this);
 
